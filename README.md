@@ -41,17 +41,19 @@ Sublime Text -> Preferences -> Package Settings -> ApplySyntax -> Settings - Use
 ```
 
 ```
-    "syntaxes": [{
-        "name": "Ansible/Ansible",
+    "syntaxes": [
+        {
+        "syntax": "Ansible/Ansible",
         "rules": [
-          {"file_name": ".*/tasks/.*.yml$"},
-          {"file_name": ".*/handler/.*.yml$"},
-          {"file_name": ".*/*_vars/.*.yml$"},
-          {"file_name": ".*/roles/.*.yml$"},
-          {"file_name": ".*/playbooks/.*.yml$"},
-          {"file_name": ".*/.*ansible.*/.*.yml$"}
-        ]
-      }]
+          {"file_path": ".*/tasks/.*.yml$"},
+          {"file_path": ".*/handlers/.*.yml$"},
+          {"file_path": ".*/*_vars/.*.yml$"},
+          {"file_path": ".*/defaults/.*.yml$"},
+          {"file_path": ".*/roles/.*.yml$"},
+          {"file_path": ".*/playbooks/.*.yml$"},
+          {"file_path": ".*/.*ansible.*/.*.yml$"}]
+        }
+    ]
 ```
 
 ### Linter configuration
