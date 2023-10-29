@@ -1,6 +1,7 @@
 @ECHO OFF
 SETLOCAL
 
+https://stackoverflow.com/a/5807218/7485823
 CALL :lastarg xxx %*
 CALL :skiplastarg yyy %*
 wsl --shell-type login ansible-lint %yyy% $(wslpath -a "%XXX%")
