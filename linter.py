@@ -17,8 +17,8 @@ class AnsibleLint(Linter):
     """Provides an interface to ansible-lint."""
 
     # linter settings
-    cmd = ('ansible-lint', '${args}', '${file}')
-    regex = r'^.+:(?P<line>\d+): \[.(?P<error>.+)\] (?P<message>.+)'
+    cmd = ('ansible-lint', '${args}', '--show-relpath', '${file}')
+    regex = r'^.+:(?P<line>\d+): (?P<error>\w*\[.+\]): (?P<message>.+)'
     # -p generate non-multi-line, pep8 compatible output
     multiline = False
 
